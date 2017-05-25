@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+<!--客户管理总界面-->
+    <servlet>
+        <servlet-name>customerservlet</servlet-name>
+        <servlet-class>com.scm.controller.customer.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>customerservlet</servlet-name>
+        <url-pattern>/customer/customer</url-pattern>
+    </servlet-mapping>
+<!--添加客户-->
+    <servlet>
+        <servlet-name>customeraddservlet</servlet-name>
+        <servlet-class>com.scm.controller.customer.CustomerAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>customeraddservlet</servlet-name>
+        <url-pattern>/customer/add</url-pattern>
+    </servlet-mapping>
+<!--修改用户-->
+    <servlet>
+        <servlet-name>customereditservlet</servlet-name>
+        <servlet-class>com.scm.controller.customer.CustomerEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>customereditservlet</servlet-name>
+        <url-pattern>/customer/edit</url-pattern>
+    </servlet-mapping>
+<!--删除用户-->
+    <servlet>
+        <servlet-name>customerdelservlet</servlet-name>
+        <servlet-class>com.scm.controller.customer.CustomerDelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>customerdelservlet</servlet-name>
+        <url-pattern>/customer/del</url-pattern>
+    </servlet-mapping>
+
+<!--管理销售单-->
+    <servlet>
+        <servlet-name>sellservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellservlet</servlet-name>
+        <url-pattern>/sell/sell</url-pattern>
+    </servlet-mapping>
+<!--添加销售单-->
+    <servlet>
+        <servlet-name>selladdservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selladdservlet</servlet-name>
+        <url-pattern>/sell/add</url-pattern>
+    </servlet-mapping>
+<!--删除销售单-->
+    <servlet>
+        <servlet-name>selldelservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellDelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selldelservlet</servlet-name>
+        <url-pattern>/sell/del</url-pattern>
+    </servlet-mapping>
+<!--修改销售单-->
+    <servlet>
+        <servlet-name>selleditservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selleditservlet</servlet-name>
+        <url-pattern>/sell/edit</url-pattern>
+    </servlet-mapping>
+<!--了结销售单-->
+    <servlet>
+        <servlet-name>sellendservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellEndServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellendservlet</servlet-name>
+        <url-pattern>/sell/end</url-pattern>
+    </servlet-mapping>
+
+<!--查找销售单-->
+    <servlet>
+        <servlet-name>sellfindservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellfindservlet</servlet-name>
+        <url-pattern>/sell/find</url-pattern>
+    </servlet-mapping>
+<!--销售报表-->
+    <servlet>
+        <servlet-name>sellreportservlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellreportservlet</servlet-name>
+        <url-pattern>/sell/report</url-pattern>
+    </servlet-mapping>
+
+<!--AJAX选择产品-->
+    <servlet>
+        <servlet-name>sellCpServlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellCpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellCpServlet</servlet-name>
+        <url-pattern>/sell/choiceproduct</url-pattern>
+    </servlet-mapping>
+
+<!--AJAX选择客户-->
+    <servlet>
+        <servlet-name>sellCcServlet</servlet-name>
+        <servlet-class>com.scm.controller.sell.SellCcServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sellCcServlet</servlet-name>
+        <url-pattern>/sell/choicecustomer</url-pattern>
+    </servlet-mapping>
+</web-app>
